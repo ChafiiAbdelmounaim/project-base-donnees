@@ -21,6 +21,7 @@ CREATE TABLE AGENCE_DE_VOYAGE (
 
 CREATE TABLE CHAMBRE (
     Cod_C VARCHAR(50) PRIMARY KEY,
+    Etage INT,
     Surface DECIMAL(10,2),
     Type_Chambre VARCHAR(20) CHECK(Type_Chambre IN ('Simple', 'Double', 'Triple', 'Suite')) DEFAULT 'Simple'
 );
@@ -58,7 +59,7 @@ CREATE TABLE RESERVATION (
     CHAMBRE_Cod_C VARCHAR(50),
     Date_debut DATE,
     Date_fin DATE,
-    Prix DECIMAL(10,2),
+    Prix_journalier DECIMAL(10,2),
     AGENCE_DE_VOYAGE_Cod_A VARCHAR(50),
     PRIMARY KEY (CHAMBRE_Cod_C, Date_debut),
     FOREIGN KEY (CHAMBRE_Cod_C) REFERENCES CHAMBRE(Cod_C),
@@ -81,16 +82,16 @@ INSERT INTO AGENCE_DE_VOYAGE VALUES
 ('A005', 'www.festravel.com', '+212535556677', '30', 'Maroc', 'Rue Boukhandiss', '30000', 'Fes');
 
 INSERT INTO CHAMBRE VALUES
-('C101', 25.0, 'Simple'),
-('C102', 35.0, 'Double'),
-('C103', 45.0, 'Triple'),
-('C104', 55.0, 'Suite'),
-('C105', 28.0, 'Simple'),
-('C106', 38.0, 'Double'),
-('C107', 48.0, 'Triple'),
-('C108', 65.0, 'Suite'),
-('C201', 30.0, 'Simple'),
-('C202', 40.0, 'Double');
+('C101', 1, 25.0, 'Simple'),
+('C102', 1, 35.0, 'Double'),
+('C103', 1, 45.0, 'Triple'),
+('C104', 1, 55.0, 'Suite'),
+('C105', 1, 28.0, 'Simple'),
+('C106', 1, 38.0, 'Double'),
+('C107', 1, 48.0, 'Triple'),
+('C108', 1, 65.0, 'Suite'),
+('C201', 2, 30.0, 'Simple'),
+('C202', 2, 40.0, 'Double');
 
 INSERT INTO EQUIPEMENT VALUES
 ('Minibar'),
