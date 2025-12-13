@@ -94,7 +94,7 @@ INSERT INTO CHAMBRE VALUES
 ('C202', 2, 40.0, 'Double');
 
 INSERT INTO EQUIPEMENT VALUES
-('Minibar'),
+('Minifridge'),
 ('Jacuzzi'),
 ('Balcon'),
 ('TV ecran plat'),
@@ -108,14 +108,14 @@ INSERT INTO EQUIPEMENT VALUES
 INSERT INTO HAS_EQUIPEMENT VALUES
 ('C101', 'TV ecran plat'),
 ('C101', 'Climatisation'),
-('C102', 'Minibar'),
+('C102', 'Minifridge'),
 ('C102', 'Balcon'),
 ('C103', 'Jacuzzi'),
 ('C104', 'Cuisine equipee'),
 ('C104', 'TV ecran plat'),
 ('C104', 'WiFi'),
 ('C105', 'Coffee machine'),
-('C106', 'Minibar'),
+('C106', 'Minifridge'),
 ('C106', 'Seche-cheveux'),
 ('C107', 'Balcon'),
 ('C108', 'Jacuzzi'),
