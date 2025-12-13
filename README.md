@@ -7,17 +7,15 @@ A simple Streamlit web application for managing hotel reservations.
 ```
 project-base-donnees/
 ├── app/
-│   ├── pages/                      # Streamlit pages
-│   │   ├── 1_🏢_Agences.py        # Agencies page (Member 3)
-│   │   ├── 2_🛏️_Chambres.py       # Rooms page (Member 4)
-│   │   └── 3_📅_Reservations.py   # Reservations page (Member 5)
+│   ├── pages/                   
+│   │   ├── agences_page.py       
+│   │   ├── chambers_page.py      
+│   │   └── reservations_page.py   
 │   ├── utils/
 │   │   ├── __init__.py
-│   │   └── database_connection.py  # Database utilities (Member 1)
-│   ├── styles/
-│   │   └── style.css              # CSS styles
-│   ├── images/                     # Room images (optional)
-│   └── home_page.py               # Home page (Member 2)
+│   │   └── database_connection.py  
+│   ├── images/                    
+│   └── home_page.py              
 ├── data/
 │   └── mysqlsampledatabase.sql    # Database schema and data
 ├── .env                           # Environment variables
@@ -47,24 +45,8 @@ streamlit run home_page.py
 ### Step 4: Open in Browser
 Go to: http://localhost:8501
 
-## 👥 Team Members
-
-| Page | Member | File |
-|------|--------|------|
-| Database Connection | Member 1 | `utils/database_connection.py` |
-| Home Page | Member 2 | `home_page.py` |
-| Agencies Page | Member 3 | `pages/1_🏢_Agences.py` |
-| Rooms Page | Member 4 | `pages/2_🛏️_Chambres.py` |
-| Reservations Page | Member 5 | `pages/3_📅_Reservations.py` |
-
-## 📊 Database Access
-
-- **phpMyAdmin**: http://localhost:8081
-- **Username**: student
-- **Password**: user_pwd
 
 ## 📝 Notes
 
 - Make sure Docker is running before starting the app
 - The database is automatically initialized with sample data
-- CSS styles are in `app/styles/style.css`
